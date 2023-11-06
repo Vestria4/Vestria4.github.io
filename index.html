@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Homepage</title>
+    <style>
+        body {
+            background-image: linear-gradient(#5f8bc2, #cfe0ea, #5f8bc2);
+            color: #003366;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            transition: background-image 0.3s;
+            cursor: url('path/to/your-custom-cursor.png'), auto; /* Replace 'path/to/your-custom-cursor.png' with the actual path to your custom cursor image */
+        }
+
+        #cursor-outer {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #003366;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Your existing content -->
+    <h1>Welcome to My GitHub Homepage!</h1>
+    <p>This is a simple homepage for my GitHub repository.</p>
+    <a href="https://vestria4.github.io/GRAB-Downloader/" target="_blank" class="download-button">
+        Level Downloader
+    </a>
+
+    <!-- Custom cursor div -->
+    <div id="cursor-outer"></div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const cursorOuter = document.getElementById('cursor-outer');
+           
