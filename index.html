@@ -17,7 +17,7 @@
             height: 100vh;
             position: relative;
             transition: background-image 0.3s;
-            cursor: url('path/to/your-custom-cursor.png'), auto; /* Replace 'path/to/your-custom-cursor.png' with the actual path to your custom cursor image */
+            cursor: none;
         }
 
         #cursor-outer {
@@ -28,6 +28,7 @@
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
+            background-color: #003366;
         }
     </style>
 </head>
@@ -46,4 +47,10 @@
     <script>
         document.addEventListener('mousemove', (e) => {
             const cursorOuter = document.getElementById('cursor-outer');
-           
+            cursorOuter.style.left = `${e.clientX - 10}px`; // Adjusted for cursor size
+            cursorOuter.style.top = `${e.clientY - 10}px`; // Adjusted for cursor size
+        });
+    </script>
+</body>
+
+</html>
